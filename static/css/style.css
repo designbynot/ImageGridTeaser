@@ -9,6 +9,8 @@ body {
 .container {
     width: 100vw;
     height: 100vh;
+    padding: 2vh;
+    box-sizing: border-box;
     display: flex;
     align-items: center;
     justify-content: center;
@@ -47,30 +49,39 @@ body {
 }
 
 /* Responsive adjustments */
+@media (max-width: 1200px) {
+    .psyop-grid {
+        width: 95vw;
+        height: 85vh;
+    }
+}
+
 @media (max-width: 992px) {
     .psyop-grid {
         grid-template-columns: repeat(3, 1fr);
-        width: 90vw;
-        height: 90vh;
+        width: 95vw;
+        height: 80vh;
+        gap: 1.5vh;
     }
 }
 
 @media (max-width: 768px) {
     .psyop-grid {
         grid-template-columns: repeat(2, 1fr);
-        width: 85vw;
-        height: 85vh;
-    }
-    .psyop-grid {
+        width: 90vw;
+        height: 75vh;
         gap: 1vh;
     }
 }
 
-@media (max-width: 480px) {
+@media (max-width: 576px) {
     .psyop-grid {
-        grid-template-columns: 1fr;
-        width: 80vw;
-        height: auto;
-        gap: 2vh;
+        grid-template-columns: repeat(2, 1fr);
+        width: 95vw;
+        height: 70vh;
+        gap: 0.8vh;
+    }
+    .grid-item:hover {
+        transform: scale(1.01);
     }
 }
