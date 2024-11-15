@@ -1,23 +1,27 @@
 body {
     background-color: #000;
     min-height: 100vh;
-    display: flex;
-    align-items: center;
-    justify-content: center;
     margin: 0;
-    padding: 20px;
+    padding: 0;
+    overflow: hidden;
 }
 
 .container {
-    max-width: 1200px;
-    margin: 0 auto;
+    width: 100vw;
+    height: 100vh;
+    padding: 2vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
 }
 
 .psyop-grid {
     display: grid;
     grid-template-columns: repeat(4, 1fr);
-    gap: 20px;
-    margin: 0 auto;
+    gap: 2vh;
+    width: 100%;
+    height: 100%;
+    margin: 0;
 }
 
 .grid-item {
@@ -53,6 +57,12 @@ body {
 @media (max-width: 768px) {
     .psyop-grid {
         grid-template-columns: repeat(2, 1fr);
+    }
+    .container {
+        padding: 1vh;
+    }
+    .psyop-grid {
+        gap: 1vh;
     }
 }
 
