@@ -14,6 +14,10 @@ for i in range(1, 13):
     if os.path.exists(source):
         shutil.copy2(source, destination)
 
+# Copy favicon
+if os.path.exists('black.png'):
+    shutil.copy2('black.png', 'static/images/favicon.png')
+
 @app.route('/')
 def index():
     return render_template('index.html')
